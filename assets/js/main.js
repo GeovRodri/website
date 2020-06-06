@@ -1,79 +1,44 @@
-$(document).ready(function() {
+(() => {
+  // Theme switch
+  const body = document.body;
+  const lamp = document.getElementById("mode");
+  const data = body.getAttribute("data-theme");
 
-    /* ======= Scrollspy ======= */
-   $('body').scrollspy({ target: '#page-nav-wrapper', offset: 100});
-    
-    /* ======= ScrollTo ======= */
-    $('.scrollto').on('click', function(e){
-        
-        //store hash
-        var target = this.hash;
-                
-        e.preventDefault();
-        
-		$('body').scrollTo(target, 800, {offset: -60, 'axis':'y'});
-		
-	});
-	
-	/* ======= Fixed page nav when scrolled ======= */    
-    $(window).on('scroll resize load', function() {
-        
-        $('#page-nav-wrapper').removeClass('fixed');
-         
-         var scrollTop = $(this).scrollTop();
-         var topDistance = $('#page-nav-wrapper').offset().top;
-         
-         if ( (topDistance) > scrollTop ) {
-            $('#page-nav-wrapper').removeClass('fixed');
-            $('body').removeClass('sticky-page-nav');
-         }
-         else {
-            $('#page-nav-wrapper').addClass('fixed');
-            $('body').addClass('sticky-page-nav');
-         }
+  const initTheme = (state) => {
+    if (state === "dark") {
+      body.setAttribute("data-theme", "dark");
+    } else if (state === "light") {
+      body.removeAttribute("data-theme");
+    } else {
+      localStorage.setItem("theme", data);
+    }
+  };
 
-    });
-    
-    /* ======= Chart ========= */
-    
-    $('.chart').easyPieChart({		
-		barColor:'#00BCD4',//Pie chart colour
-		trackColor: '#e8e8e8',
-		scaleColor: false,
-		lineWidth : 5,
-		animate: 2000,
-		onStep: function(from, to, percent) {
-			$(this.el).find('span').text(Math.round(percent));
-		}
-	});  
-	
+  const toggleTheme = (state) => {
+    if (state === "dark") {
+      localStorage.setItem("theme", "light");
+      body.removeAttribute("data-theme");
+    } else if (state === "light") {
+      localStorage.setItem("theme", "dark");
+      body.setAttribute("data-theme", "dark");
+    } else {
+      initTheme(state);
+    }
+  };
 
-    
-    /* ======= Isotope plugin ======= */
-    /* Ref: http://isotope.metafizzy.co/ */
-    // init Isotope    
-    var $container = $('.isotope');
-    
-    $container.imagesLoaded(function () {
-        $('.isotope').isotope({
-            itemSelector: '.item'
-        });
-    });
-    
-    // filter items on click
-    $('#filters').on( 'click', '.type', function() {
-      var filterValue = $(this).attr('data-filter');
-      $container.isotope({ filter: filterValue });
-    });
-    
-    // change is-checked class on buttons
-    $('.filters').each( function( i, typeGroup ) {
-        var $typeGroup = $( typeGroup );
-        $typeGroup.on( 'click', '.type', function() {
-          $typeGroup.find('.active').removeClass('active');
-          $( this ).addClass('active');
-        });
-    });
-    
+  initTheme(localStorage.getItem("theme"));
 
-});
+  lamp.addEventListener("click", () =>
+    toggleTheme(localStorage.getItem("theme"))
+  );
+
+  // Blur the content when the menu is open
+  const cbox = document.getElementById("menu-trigger");
+
+  cbox.addEventListener("change", function () {
+    const area = document.querySelector(".wrapper");
+    this.checked
+      ? area.classList.add("blurry")
+      : area.classList.remove("blurry");
+  });
+})();
