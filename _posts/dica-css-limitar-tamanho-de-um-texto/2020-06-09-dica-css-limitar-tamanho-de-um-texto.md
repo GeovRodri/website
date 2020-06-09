@@ -5,11 +5,11 @@ tags: [css, ui, ux]
 description: Dica de CSS sobre como limitar um texto colocando "..."
 ---
 
-E aí pessoal, hoje vou explicar algo bem simples mas muito importante para a cricão de páginas. 
-Sabe quando você tem um texto um texto muito grande mas só quer mostrar uma parte? Vou explicar 
+E aí pessoal, hoje vou explicar algo bem simples mas muito importante para a criação de páginas.
+Sabe quando você tem um texto um texto muito grande mas só quer mostrar uma parte? Vou explicar
 como fazer isso sem a necessidade de JavaScript. Então vamos lá!!
 
-Vamos considerar o seguinte cenario:
+Vamos considerar o seguinte cenário:
 <div style="box-shadow: 0 0 3px; padding: 10px;">
   <h2 style="margin: 0 0 5px;">Titulo</h2>
   <div class="description">
@@ -17,7 +17,7 @@ Vamos considerar o seguinte cenario:
     </div>
 </div>
 
-Para limitar o tamanho do texto(Apenas uma linha) basta colocar o seguinte código na sua clase CSS:
+Para limitar o tamanho do texto (Apenas uma linha) basta colocar o seguinte código na sua classe CSS:
 
 ``` css
 max-width: 500px; // Limite máximo do texto
