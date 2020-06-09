@@ -19,7 +19,7 @@ author:
 url: "https://geovany.dev"
 baseurl:
 permalink: /:title/
-google_analytics:
+google_analytics: UA-168922202-1
 fb_appid:
 
 # Collection setting
@@ -69,6 +69,8 @@ exclude:
   - README.md
   - node_modules
   - CODE_OF_CONDUCT.md
+  - .firebaserc
+  - firebase.json
 
 # Plugins
 plugins:

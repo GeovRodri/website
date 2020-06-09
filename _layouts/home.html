@@ -14,14 +14,3 @@ home: true
     </article>
     {% endfor %}
 {% endif %}
-
-<div class="description">
-    Desenvolvedor web atualmente morando em Goiânia. Trabalho na área a 4 anos(até 2020) e atualmente
-    sou desenvolvedor Full Stack na StayApp. Nas horas livres gosto de tomar uma cerveja, e maratonar séries aleatórias.
-</div>
-
-{% for social in site.data.socials %}
-    <a class="icons" href="{{ social.url }}">
-        <i class="{{ social.icon }}"></i>
-    </a>
-{% endfor %}
