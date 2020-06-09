@@ -19,8 +19,8 @@ Vamos considerar o seguinte cenário:
 
 Para limitar o tamanho do texto (Apenas uma linha) basta colocar o seguinte código na sua classe CSS:
 
-``` css
-max-width: 500px; // Limite máximo do texto
+```css
+max-width: 500px; // Limite maximo do texto
 white-space: nowrap; // Removendo quebra de linha
 overflow: hidden; // Removendo a barra de rolagem
 text-overflow: ellipsis; // Adicionando "..." ao final do texto
@@ -52,3 +52,5 @@ O resultado será esse (<a href="https://codepen.io/geovrodri/pen/eYJpMyp" targe
     Lorem ipsum dolor sit amet,   consectetur adipiscing elit. Aliquam consequat feugiat nunc nec aliquet. Suspendisse nisi odio, posuere a dapibus quis, tincidunt eu lorem. Donec ut ornare nisl, a ornare dolor. Integer vestibulum, dui eu lacinia sodales, neque ante dapibus magna, ac ornare lorem lectus tempor nunc. Duis elementum, tortor nec tincidunt suscipit, ante lacus rutrum tellus, id fermentum nulla lectus ac risus. Nulla aliquet, ligula eget finibus imperdiet, augue metus consectetur justo, ac tempus nunc lectus vitae eros. Aliquam  iaculis vestibulum ultrices.
     </div>
 </div>
+
+Muito obrigado e até a próxima.
