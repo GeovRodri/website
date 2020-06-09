@@ -9,3 +9,7 @@
 - title: whatsapp
   url: https://wa.me/5562993742697
   icon: fab fa-whatsapp
+
+- title: dev
+  url: https://dev.to/geovrodri
+  icon: fab fa-dev
