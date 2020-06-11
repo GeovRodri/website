@@ -1,5 +1,5 @@
 ---
-title: Geovany Rodrigues
+title: Sobre mim
 permalink: /about/
 layout: page
 excerpt: Olá pessoas, meu nome é Geovany Rodrigues e esse é meu blog pessoal. Nele vou postar coisas relacionadas ao desenvolvimento WEB além de postar em outros canais como o dev.to
