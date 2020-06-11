@@ -25,6 +25,7 @@ group :jekyll_plugins do
   gem 'jekyll-postfiles', '~> 3.0'
   gem 'rouge', '3.3.0'
   gem 'jekyll-font-awesome-sass'
+  gem 'jekyll-compress-images'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
