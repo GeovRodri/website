@@ -6,10 +6,10 @@
   url: https://www.linkedin.com/in/geovany-rodrigues-110165120/
   icon: fab fa-linkedin
 
-- title: whatsapp
-  url: https://wa.me/5562993742697
-  icon: fab fa-whatsapp
-
 - title: dev
   url: https://dev.to/geovrodri
   icon: fab fa-dev
+
+- title: email
+  url: mailto:geovanyscv@gmail.com
+  icon: fas fa-envelope
